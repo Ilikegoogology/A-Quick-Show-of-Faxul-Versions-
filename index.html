@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quick Show of Faxul Versions</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #faxul-version {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="faxul-version">Loading...</div>
+    <script>
+        const versions = [
+            'faxul - 200!',
+            'Kilofaxul - (200!)!',
+            'Megafaxul - (200!)!)!',
+         		'Gigafaxul - (200)!)!)!)',
+            'Terafaxul - 200!^4'
+            'Pentafaxul - 200!^5'
+     		    'Exafaxul - 200!^6'
+            'Grand faxul - 200!^200!',
+            // Add more versions as needed
+        ];
+        
+        let index = 0;
+        const updateText = () => {
+            document.getElementById('faxul-version').innerText = versions[index];
+            index = (index + 1) % versions.length;
+        };
+        
+        setInterval(updateText, 100);
+    </script>
+</body>
+</html>
